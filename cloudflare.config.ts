@@ -13,6 +13,7 @@ export default defineConfig({
       runWorkerFirst: true,
     },
     env: {
+      ASSETS: bindings.assets(),
       SITE_ASSETS: bindings.worker({ worker: "salve-o-mangue" }),
     },
     exports: {
