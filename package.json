@@ -1,0 +1,23 @@
+{
+  "name": "salve-mangue-multiplayer-v2",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.18.0" },
+  "scripts": {
+    "prepare-worker": "node scripts/prepare-worker.mjs",
+    "predev": "npm run prepare-worker",
+    "prebuild": "npm run prepare-worker",
+    "precheck": "npm run prepare-worker",
+    "pretest": "npm run prepare-worker",
+    "dev": "cf dev",
+    "build": "cf build",
+    "deploy": "cf deploy",
+    "check": "node --check src/worker.js && node tests/smoke.test.js",
+    "test": "node tests/smoke.test.js"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "latest",
+    "cf": "latest",
+    "vite": "latest"
+  }
+}
