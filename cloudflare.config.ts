@@ -8,6 +8,10 @@ export default defineConfig({
     compatibilityDate: "2026-11-13",
     compatibilityFlags: ["enable_ctx_exports"],
     workersDev: true,
+    assets: {
+      // Execute the Worker before Vite's placeholder asset so it can proxy the real game.
+      runWorkerFirst: true,
+    },
     env: {
       SITE_ASSETS: bindings.worker({ worker: "salve-o-mangue" }),
     },
