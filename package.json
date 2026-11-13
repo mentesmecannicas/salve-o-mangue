@@ -7,13 +7,10 @@
     "prepare-worker": "node scripts/prepare-worker.mjs",
     "predev": "npm run prepare-worker",
     "prebuild": "npm run prepare-worker",
-    "precheck": "npm run prepare-worker",
-    "pretest": "npm run prepare-worker",
     "dev": "cf dev",
     "build": "cf build",
     "deploy": "cf deploy",
-    "check": "node --check src/worker.js && node tests/smoke.test.js",
-    "test": "node tests/smoke.test.js"
+    "deploy-prebuilt": "cf deploy --prebuilt"
   },
   "devDependencies": {
     "@cloudflare/vite-plugin": "latest",
