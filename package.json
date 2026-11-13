@@ -13,7 +13,7 @@
     "deploy-prebuilt": "cf deploy --prebuilt"
   },
   "devDependencies": {
-    "@cloudflare/vite-plugin": "latest",
+    "@cloudflare/vite-plugin": "beta",
     "cf": "latest",
     "vite": "latest"
   }
