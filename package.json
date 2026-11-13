@@ -10,7 +10,7 @@
     "dev": "cf dev",
     "build": "cf build",
     "deploy": "cf deploy",
-    "deploy-prebuilt": "cf deploy --prebuilt"
+    "deploy-prebuilt": "cf deploy --prebuilt --force"
   },
   "devDependencies": {
     "@cloudflare/vite-plugin": "beta",
